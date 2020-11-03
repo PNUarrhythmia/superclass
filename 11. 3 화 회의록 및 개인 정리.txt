@@ -1,0 +1,38 @@
+- Normalize
+- CNN conv, padding, stride 조정
+- window size 조정
+- elu, ReLu 등 적합한 것 찾아 이용
+- Adam ? 다른 기법은 어떤지
+- softmax, cross Entropy
+
+-> 이후 데이터 부족으로 인한 문제가 있을 시에 Data augmentation ... 
+overfitting 문제가 있으면 우선 maximum_counting 조정해서 N값부터 조정해 보기.
+
+- Inception <- Network In Network(NIN)
+: CNN 안에 MLP(다층 퍼셉트론을 넣는 것)
+
+NIN은 신경망의 효력을 높이기 위해 1*1 Convolution Layer 추가 적용 -> ReLu
+
+1. 컴퓨터 병목현상을 
+
+- Residual
+: VGG-16 or VGG-19 Layer개수가 16인지 19인지에 따라 나뉨.
+파라미터가 약 1억 이상이 됨.
+but, mitbih arrhythmia dataset에는 이 정도의 많은 Layer를 필요로 하지 않으며, 
+데이터의 수가 충분하지 않은 상태에서 Layer가 복잡해지면 Depth가 높아지면 성능이 좋아진다는 보편적인 생각과 반대로
+성능이 떨어질 수 있다.
+
+
+- 1D CNN 쓰는 이유, 어떻게 사용하는지
+참고 URL : https://blog.goodaudience.com/introduction-to-1d-convolutional-neural-networks-in-keras-for-time-sequences-3a7ff801a2cf
+ 1D CNN은 전체 데이터 세트의 더 짧은 (고정 길이) 세그먼트에서 
+흥미로운 기능을 도출 할 것으로 예상하고 세그먼트 내의 기능 위치가 관련성이 높지 않은 경우 매우 효과적입니다.
+-> Window size 로 억지로 고정길이를 맞출 수는 있으나 기능 위치가 관련성이 높다. 그래서 비효과적일 듯.
+-> 근데 왜 고정길이에서 효과가 있는가?
+-> 자연어 처리에서는 1D CNN을 쓰는데 고정길이는 아니어도 기능 
+2D CNN과 1D CNN의 차이점은 미끄러지는 방식. 미끄러지는 방식이 ㄹ형태이면 2D CNN, ㅣ이면 1D CNN이다.
+-> 이게 무슨 상관?
+
+이는 센서 데이터 (예 : 자이로 스코프 또는 가속도계 데이터)의 시간 시퀀스 분석에 잘 적용됩니다. 
+또한 고정 길이 기간 (예 : 오디오 신호)에 대한 모든 종류의 신호 데이터 분석에도 적용됩니다. 
+또 다른 응용 프로그램은 NLP입니다 
