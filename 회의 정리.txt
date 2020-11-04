@@ -2,7 +2,7 @@
 - CNN conv, padding, stride 조정
 - window size 조정
 - elu, ReLu 등 적합한 것 찾아 이용
-- Adam ? 다른 기법은 어떤지
+- Adam -> 정리 완료
 - softmax, cross Entropy
 
 -> 이후 데이터 부족으로 인한 문제가 있을 시에 Data augmentation ... 
