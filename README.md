@@ -144,3 +144,27 @@
 	-  [   0    0 1014    1    0]  - VEB
 	-  [   0    0    3  973    0]  - F
 	-  [   0    0   35    8  925]] - Q
+-----------------------------------------------------------------------------------------------------
+### 1-2-5) 각 Beat type 별 정확도 계산(window size = 160, resampling = 10000) - mit-bih arrhythmia CNN_Beat_1.ipynb
+
+* Model)
+	- CNN (activ='relu') 
+* accuracy : 96.63% (precision, recall, f1 score 모두 0.15) 내의 오차 범위.
+
+* beat 타입별 Confusion Matrix 계산으로 제대로 학습된 beat와 아닌 beat 구별
+
+* 데이터 부족으로 인한 문제라고 판단 후 -> SMOTE 적용 고려
+: accuracy, precision 급격하게 감소하여 20% 대 미만의 확률을 보이며, recall 은 소폭 상승할 수 있지만, F1-score 역시 감소하여 작은 데이터의 비트를 예측하는데는 성능 향상을 보일 수 있으나, superclass 예측을 위한 성능은 오히려 떨어지게 되는 것을 확인, 각 비트별 경계가 명확하지 않아 smote 시 다른 비트(class)의 영역을 침범할 수 있어 recall 또한 떨어질 수 있음.
+
+* SMOTE의 문제점 파악 후 MSMOTE 적용하려하였으나 앞선 문제의 해결을 기대하기 어렵고
+- security/safe samples
+- border samples
+- latent(잠재) noise sample 
+을 나누는 기준을 판단하기 어려운 문제
+--------------------------------------------------------------------------------------------------
+Optimizer : Adam : CNN 모델 적용시 여러 Optimizer 중 최고 효율
+Activation function - 신경망이 충분히 깊고 넓으며 충분한 Epoch 이 주어지지 않았기 때문에 Dying ReLU가 일어나지 않는 Activation Function 적용 필요 - ?
+Window Size - Window Size 설정 기준
+residual, inception 적용시키기에는 충분한 data 개수가 존재하지 않아 parameter 부족.
+Batch normalization 적용시켜 한쪽으로 치우치지 않게 함으로써 gradient vanishing/exploding 방지
+
