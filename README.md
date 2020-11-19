@@ -158,9 +158,9 @@
   작은 데이터의 비트를 예측하는데는 성능 향상을 보일 수 있으나, superclass를 위한 예측 성능은 오히려 떨어지게 되는 것을 확인하였으며 뿐만 아니라 각 비트별 경계가 명확하지 않아 smote 시 다른 비트(class)의 영역을 침범할 수 있어 recall 또한 떨어질 수 있음.
 
 * SMOTE의 문제점 파악 후 MSMOTE 적용하려하였으나 앞서 발생한 문제의 해결을 기대하기 어렵고
-- security/safe samples
-- border samples
-- latent(잠재) noise sample 
+	- security/safe samples
+	- border samples
+	- latent(잠재) noise sample 
 을 나누는 기준을 판단하기 어려운 문제
 --------------------------------------------------------------------------------------------------
 - Optimizer : Adam : CNN 모델 적용시 여러 Optimizer 중 최고 효율
