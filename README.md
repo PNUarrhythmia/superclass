@@ -50,12 +50,12 @@
 
 * Result) Accuracy = 95.02, F1 score = 95.03, 
 	Confusion matrix = 
-	[[ 979    0    3   11    7    0]  - N
-	 [  34  943    0    1   22    0]  - A
-	 [  22    0  976    2    0    0]  - V
-	 [ 146    2    3  848    1    0]  - /
-	 [  11   11    8   15  955    0]  - L
-	 [   0    0    0    0    0 1000]] - R
+	- [[ 979    0    3   11    7    0]  - N
+	-  [  34  943    0    1   22    0]  - A
+	-  [  22    0  976    2    0    0]  - V
+	-  [ 146    2    3  848    1    0]  - /
+	-  [  11   11    8   15  955    0]  - L
+	-  [   0    0    0    0    0 1000]] - R
 
 ### 1-1-2) N, A, V, /, L, R 대상 2 - 04_Classification_of_ECG_signals.ipynb
 
@@ -65,12 +65,12 @@
 
 * Result) Accuracy = 96.83, F1 score = 96.76, 
 	Confusion matrix = 
-	[[967   0   2  22   9   0]  - N
- 	 [ 31 949   1   0  19   0]  - A
-	 [ 10   0 979   2   9   0]  - V
-	 [ 67   0   3 927   3   0]  - /
-	 [  4   0   3   2 989   2]  - L
-	 [  1   0   0   0   0 999]] - R
+	- [[967   0   2  22   9   0]  - N
+ 	-  [ 31 949   1   0  19   0]  - A
+	-  [ 10   0 979   2   9   0]  - V
+	-  [ 67   0   3 927   3   0]  - /
+	-  [  4   0   3   2 989   2]  - L
+	-  [  1   0   0   0   0 999]] - R
 
 ### 1-2-1) Super Class 대상 1 (resampling=5000, accuracy=91.82%) - 05_Classification_of_ECG_signals.ipynb
 
@@ -88,11 +88,11 @@
 
 * Result) Accuracy = 91.82, F1 score = 91.67, 
 	Confusion matrix = 
-	[[895  24  32  49   0]  - N
-	 [145 797  50   8   0]  - SVEB
-	 [  8   4 966  22   0]  - VEB
-	 [ 32   1  24 943   0]  - F
-	 [  4   1   5   0 990]] - Q
+	- [[895  24  32  49   0]  - N
+	-  [145 797  50   8   0]  - SVEB
+	-  [  8   4 966  22   0]  - VEB
+	-  [ 32   1  24 943   0]  - F
+	-  [  4   1   5   0 990]] - Q
 
 ### 1-2-2) Super Class 대상 2 (resampling=3000, accuracy=92.19%) - 06_Classification_of_ECG_signals.ipynb
 
@@ -104,11 +104,11 @@
 
 * Result) Accuracy = 92.19, F1 score = 92.15, 
 	Confusion matrix = 
-	[[308 156  44  91   1] - N
-	 [ 43 506  33  18   0]  - SVEB
-	 [ 15  55 484  45   1]  - VEB
-	 [ 76  68  34 421   1]  - F
-	 [ 20   3  21   6 550]] - Q
+	- [[308 156  44  91   1] - N
+	-  [ 43 506  33  18   0]  - SVEB
+	-  [ 15  55 484  45   1]  - VEB
+	-  [ 76  68  34 421   1]  - F
+	-  [ 20   3  21   6 550]] - Q
 
 ### 1-2-3) Super Class 대상 3 (resampling=5000, dwt, accuracy=95.76%) - 07_Classification_of_ECG_signals.ipynb
 
@@ -120,11 +120,11 @@
 
 * Result) Accuracy = 95.76, F1 score = 95.64, 
 	Confusion matrix = 
-	[[ 912   70    6   27    0] - N
-	 [  28  940    4    2    0]  - SVEB
-	 [   3   18  921   27    0]  - VEB
-	 [  19    3    4 1006    0]  - F
-	 [   1    0    0    0 1009]] - Q
+	- [[ 912   70    6   27    0] - N
+	-  [  28  940    4    2    0]  - SVEB
+	-  [   3   18  921   27    0]  - VEB
+	-  [  19    3    4 1006    0]  - F
+	-  [   1    0    0    0 1009]] - Q
 
 ### 1-2-4) Super Class 대상 4 (window size=252, resampling=5000, dwt, accuracy=98.08%) - 08_Classification_of_ECG_signals.ipynb
 
@@ -136,8 +136,8 @@
 
 * Result) Accuracy = 98.08, F1 score = 98.09, 
 	Confusion matrix = 
-	[[1009    0    0    0    0] - N
-	 [   0  983   49    0    0]  - SVEB
-	 [   0    0 1014    1    0]  - VEB
-	 [   0    0    3  973    0]  - F
-	 [   0    0   35    8  925]] - Q
+	- [[1009    0    0    0    0] - N
+	-  [   0  983   49    0    0]  - SVEB
+	-  [   0    0 1014    1    0]  - VEB
+	-  [   0    0    3  973    0]  - F
+	-  [   0    0   35    8  925]] - Q
