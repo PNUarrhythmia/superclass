@@ -134,6 +134,9 @@
 
 +) * preprocessing) pywt.dwt함수를 이용한 wavelet trans. 적용
 
+* Model)
+	- CNN (activ='relu') 
+
 * Result) Accuracy = 98.08, F1 score = 98.09, 
 	Confusion matrix = 
 	- [[1009    0    0    0    0] - N
