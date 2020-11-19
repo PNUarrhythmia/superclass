@@ -1,14 +1,13 @@
-# superclass
-mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(Deep Learning 활용)
+# mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(Deep Learning 활용)
 
 
-2020 산학협력 "MIT-BIH ArrhyThmia Dataset을 활용한 심장질환 분류모델"
+	2020 산학협력 "MIT-BIH ArrhyThmia Dataset을 활용한 심장질환 분류모델"
 
-1) Beat Type Super Class Classifier 개발 
+## 1) Beat Type Super Class Classifier 개발 
 
 분석 모델 : CNN in Keras (not Pytorch)
 
-1-1-1) N, A, V, /, L, R 대상 1 - 03_Classification_of_ECG_signals.ipynb
+### 1-1-1) N, A, V, /, L, R 대상 1 - 03_Classification_of_ECG_signals.ipynb
 
 목적 :  N, A, V, /, L, R 특정 비트에 대한 모델 성능 확인
 
@@ -25,28 +24,28 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 
 * Model) 
 	- MinMaxScaler를 통한 x_train set 정규화
-	# CNN in Keras 적용 (activ = 'elu', MaxPool1D padding = 'same')
-	#    conv. layer1
+	- //CNN in Keras 적용 (activ = 'elu', MaxPool1D padding = 'same')
+	- //    conv. layer1
 	- 1DConv => BatchNormalization
-	# pooling layer1
+	- // pooling layer1
 	- MaxPool1D
-	#    conv. layer2
+	- //    conv. layer2
 	- 1DConv => BatchNormalization
-	#    conv. layer3
+	- //    conv. layer3
 	- 1DConv => BatchNormalization
-	# pooling layer2
+	- // pooling layer2
 	- MaxPool1D
-	#    conv. layer4
+	- //    conv. layer4
 	- 1DConv => BatchNormalization
-	#    conv. layer5
+	- //    conv. layer5
 	- 1DConv => BatchNormalization
-	# pooling layer3
+	- // pooling layer3
 	- MaxPool1D
-	# flatten layer1
+	- // flatten layer1
 	- Flatten
-	#  dense layer
+	- //  dense layer
 	- Dense
-	#  output layer
+	- //  output layer
 	- Dense (6, activ = 'softmax', ...)
 
 * Result) Accuracy = 95.02, F1 score = 95.03, 
@@ -58,7 +57,7 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 	 [  11   11    8   15  955    0]  - L
 	 [   0    0    0    0    0 1000]] - R
 
-1-1-2) N, A, V, /, L, R 대상 2 - 04_Classification_of_ECG_signals.ipynb
+### 1-1-2) N, A, V, /, L, R 대상 2 - 04_Classification_of_ECG_signals.ipynb
 
 	1-1-1 모델과의 차이점
 
@@ -73,7 +72,7 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 	 [  4   0   3   2 989   2]  - L
 	 [  1   0   0   0   0 999]] - R
 
-1-2-1) Super Class 대상 1 (resampling=5000, accuracy=91.82%) - 05_Classification_of_ECG_signals.ipynb
+### 1-2-1) Super Class 대상 1 (resampling=5000, accuracy=91.82%) - 05_Classification_of_ECG_signals.ipynb
 
 	1-1-2 모델과의 차이점
 
@@ -95,7 +94,7 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 	 [ 32   1  24 943   0]  - F
 	 [  4   1   5   0 990]] - Q
 
-1-2-2) Super Class 대상 2 (resampling=3000, accuracy=92.19%) - 06_Classification_of_ECG_signals.ipynb
+### 1-2-2) Super Class 대상 2 (resampling=3000, accuracy=92.19%) - 06_Classification_of_ECG_signals.ipynb
 
 	1-2-1 모델과의 차이점
 
@@ -111,7 +110,7 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 	 [ 76  68  34 421   1]  - F
 	 [ 20   3  21   6 550]] - Q
 
-1-2-3) Super Class 대상 3 (resampling=5000, dwt, accuracy=95.76%) - 07_Classification_of_ECG_signals.ipynb
+### 1-2-3) Super Class 대상 3 (resampling=5000, dwt, accuracy=95.76%) - 07_Classification_of_ECG_signals.ipynb
 
 	1-2-1 모델과의 차이점
 
@@ -127,7 +126,7 @@ mitbih-arrhythmia dataset을 이용한 비트(Superclass), 리듬 타입 정리(
 	 [  19    3    4 1006    0]  - F
 	 [   1    0    0    0 1009]] - Q
 
-1-2-4) Super Class 대상 4 (window size=252, resampling=5000, dwt, accuracy=98.08%) - 08_Classification_of_ECG_signals.ipynb
+### 1-2-4) Super Class 대상 4 (window size=252, resampling=5000, dwt, accuracy=98.08%) - 08_Classification_of_ECG_signals.ipynb
 
 	1-2-1 모델과의 차이점
 
