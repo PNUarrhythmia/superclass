@@ -148,7 +148,7 @@
 ### 1-2-5) 각 Beat type 별 정확도 계산(window size = 160, resampling = 10000) - mit-bih arrhythmia CNN_Beat_1.ipynb
 
 * Model)
-	- CNN (activ='relu') 
+	- CNN (activ='elu') 
 * accuracy : 96.63% (precision, recall, f1 score 모두 0.15) 내의 오차 범위.
 
 * beat 타입별 Confusion Matrix 계산으로 제대로 학습된 beat와 아닌 beat 구별
