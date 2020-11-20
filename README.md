@@ -164,8 +164,8 @@
 을 나누는 기준을 판단하기 어려운 문제
 --------------------------------------------------------------------------------------------------
 - Optimizer : Adam : CNN 모델 적용시 여러 Optimizer 중 최고 효율
-- Activation function - 신경망이 충분히 깊고 넓으며 충분한 Epoch 이 주어지지 않았기 때문에 Dying ReLU가 일어나지 않는 Activation Function 적용 필요 - ?
-- Window Size - Window Size 설정 기준
+- Activation function - 신경망이 충분히 깊고 넓으며 충분한 Epoch 이 주어지지 않았기 때문에 Dying ReLU가 일어나지 않는 Activation Function 적용 필요 - elu 적용
+- Window Size - window size를 변경하면서 적절한 Size를 찾는 방법.
 - Batch normalization 적용시켜 한쪽으로 치우치지 않게 함으로써 gradient vanishing/exploding 방지
 - CNN 적용 기준?
 
