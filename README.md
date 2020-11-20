@@ -166,7 +166,6 @@
 - Optimizer : Adam : CNN 모델 적용시 여러 Optimizer 중 최고 효율
 - Activation function - 신경망이 충분히 깊고 넓으며 충분한 Epoch 이 주어지지 않았기 때문에 Dying ReLU가 일어나지 않는 Activation Function 적용 필요 - ?
 - Window Size - Window Size 설정 기준
-- residual, inception 적용시키기에는 충분한 data 개수가 존재하지 않아 parameter 부족.
 - Batch normalization 적용시켜 한쪽으로 치우치지 않게 함으로써 gradient vanishing/exploding 방지
 - CNN 적용 기준?
 
